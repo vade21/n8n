@@ -1,0 +1,11 @@
+
+services:
+  - type: web
+    name: n8n-automations
+    env: node
+    buildCommand: npm install --force && npm run build
+    startCommand: npm run start
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
