@@ -1,31 +1,12 @@
 {
-  "name": "n8n-monorepo",
-  "version": "1.101.0",
-  "private": true,
-  "engines": {
-    "node": ">=18.0.0 <20.0.0"
-  },
+  "name": "n8n-automations",
+  "version": "1.0.0",
+  "description": "Automate stuff with n8n",
+  "main": "index.js",
   "scripts": {
-    "prepare": "node scripts/prepare.mjs",
-    "preinstall": "node scripts/block-npm-install.js",
-    "build": "turbo run build",
-    "build:backend": "turbo run build:backend",
-    "build:frontend": "turbo run build:frontend",
-    "build:nodes": "turbo run build:nodes",
-    "build:n8n": "node scripts/build-n8n.mjs",
-    "build:deploy": "node scripts/build-n8n.mjs",
-    "build:docker": "node scripts/build-n8n.mjs && node scripts/dockerize-n8n.mjs",
-    "build:docker:scan": "node scripts/build-n8n.mjs && node scripts/dockerize-n8n.mjs && turbo run test:standard",
-    "build:docker:test": "node scripts/build-n8n.mjs",
-    "typecheck": "turbo typecheck",
-    "dev": "turbo run dev --parallel --env-mode=loose",
-    "lint": "turbo run lint",
-    "test": "turbo run test"
+    "start": "n8n"
   },
   "dependencies": {
-    "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "turbo": "^2.5.4"
+    "n8n": "^1.38.1"
   }
 }
